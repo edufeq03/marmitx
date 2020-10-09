@@ -44,6 +44,13 @@ a {
 	font-size: 100px;
 }
 
+/* Icones */
+#icones {
+	max-width: 30%;
+    height: auto;
+}
+
+
 a:hover,
 a:focus {
     color: #9c27c1;
