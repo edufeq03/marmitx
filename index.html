@@ -1,945 +1,414 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- <link rel="shortcut icon" href="images/star.png" type="favicon/ico" /> -->
-
-        <title>Marmit-X</title>
-
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/owl.carousel.css">
-        <link rel="stylesheet" href="css/owl.theme.css">
-        <link rel="stylesheet" href="css/animate.css">
-        <link rel="stylesheet" href="css/flexslider.css">
-        <link rel="stylesheet" href="css/pricing.css">
-        <link rel="stylesheet" href="css/main.css">
-
-
-        <script src="js/jquery-1.11.2.min.js"></script>
-        <script type="text/javascript" src="js/jquery.flexslider.min.js"></script>
-        <script type="text/javascript">
-            $(window).load(function() {
-                $('.flexslider').flexslider({
-                 animation: "slide",
-                 controlsContainer: ".flexslider-container"
-                });
-            });
-        </script>
-
-        <script src="https://maps.googleapis.com/maps/api/js"></script>
-        <script>
-            function initialize() {
-                var mapCanvas = document.getElementById('map-canvas');
-                var mapOptions = {
-                    center: new google.maps.LatLng(-23.5113, -46.8768),
-                    zoom: 16,
-                    scrollwheel: false,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP
-                }
-                var map = new google.maps.Map(mapCanvas, mapOptions)
-
-                var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(-23.5113, -46.8768),
-                    title:"Marmit-X"
-                });
-
-                // To add the marker to the map, call setMap();
-                marker.setMap(map);
-            }
-            google.maps.event.addDomListener(window, 'load', initialize);
-        </script>
-
-
-    </head>
-    <body data-spy="scroll" data-target="#template-navbar">
-
-        <!--== 4. Navigation ==-->
-        <nav id="template-navbar" class="navbar navbar-default custom-navbar-default navbar-fixed-top">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#Food-fair-toggle">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">
-                        <img id="logo" src="images/Logo_main.png" class="logo img-responsive">
-                    </a>
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="Food-fair-toggle">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#about">sobre</a></li>
-                        <!--<li><a href="#pricing">preços</a></li>-->
-                        <!--<li><a href="#great-place-to-enjoy">beer</a></li>-->
-                        <!--<li><a href="#breakfast">bread</a></li>-->
-                        <!--<li><a href="#featured-dish">featured</a></li>-->
-                        <!--<li><a href="#reserve">reservation</a></li>-->
-                        <li><a href="#contact">contato</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.row -->
-        </nav>
-
-
-        <!--== 5. Header ==-->
-        <section id="header-slider" class="owl-carousel">
-            <div class="item">
-                <div class="container">
-                    <div class="header-content">
-                        <h1 class="header-title">MARMIT-X</h1>
-                        <p class="header-sub-title">Sua marmita na hora certa!</p>
-                    </div> <!-- /.header-content -->
-                </div>
-            </div>
-            <div class="item">
-                <div class="container">
-                    <div class="header-content">
-                        <h1 class="header-title">PRATICIDADE</h1>
-                        <p class="header-sub-title">Suas refeições sem trabalho</p>
-                    </div> <!-- /.header-content -->
-                </div>
-            </div>
-            <div class="item">
-                <div class="container">
-                    <div class="header-content text-right pull-right">
-                        <h1 class="header-title">ECONOMIA</h1>
-                        <p class="header-sub-title">Melhor custo-benefício da região</p>
-                    </div> <!-- /.header-content -->
-                </div>
-            </div>
-        </section>
-
-
-
-        <!--== 6. About us ==-->
-        <section id="about" class="about">
-            <img src="images/icons/about_color.png" class="img-responsive section-icon hidden-sm hidden-xs">
-            <div class="wrapper">
-                <div class="container-fluid">
-                    <div class="row dis-table">
-                        <div class="hidden-xs col-sm-6 section-bg about-bg dis-table-cell">
-
-                        </div>
-                        <div class="col-xs-12 col-sm-6 dis-table-cell">
-                            <div class="section-content">
-                                <h2 class="section-content-title">Sobre o serviço</h2>
-                                <p class="section-content-para">
-                                    Pretendemos servir refeições no estilo pré-pago. O cliente adquire uma cartela fidelidade e consome suas refeições no seu tempo...
-                                </p>
-                                <p class="section-content-para">
-                                    tudo isso no conforto do seu trabalho ou residência
-                                </p>
-                            </div> <!-- /.section-content -->
-                        </div>
-                    </div> <!-- /.row -->
-                </div> <!-- /.container-fluid -->
-            </div> <!-- /.wrapper -->
-        </section> <!-- /#about -->
-
-
-        <!--==  7. Afordable Pricing  ==--
-        <section id="pricing" class="pricing">
-            <div id="w">
-                <div class="pricing-filter">
-                    <div class="pricing-filter-wrapper">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-10 col-md-offset-1">
-                                    <div class="section-header">
-                                        <h2 class="pricing-title">Affordable Pricing</h2>
-                                        <ul id="filter-list" class="clearfix">
-                                            <li class="filter" data-filter="all">All</li>
-                                            <li class="filter" data-filter=".breakfast">Breakfast</li>
-                                            <li class="filter" data-filter=".special">Special</li>
-                                            <li class="filter" data-filter=".desert">Desert</li>
-                                            <li class="filter" data-filter=".dinner">Dinner</li>
-                                        </ul><!-- @end #filter-list -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container">
-                    <div class="row">  
-                        <div class="col-md-10 col-md-offset-1">
-                            <ul id="menu-pricing" class="menu-price">
-                                <li class="item dinner">
-
-                                    <a href="#">
-                                        <img src="images/food1.jpg" class="img-responsive" alt="Food" >
-                                        <div class="menu-desc text-center">
-                                            <span>
-                                                <h3>Refeição única</h3>
-                                                Comprando uma marmita não programada
-                                            </span>
-                                        </div>
-                                    </a>
-                                        
-                                    <h2 class="white">R$15</h2>
-                                </li>
-
-                                <li class="item breakfast">
-
-                                    <a href="#">
-                                        <img src="images/food2.jpg" class="img-responsive" alt="Food" >
-                                        <div class="menu-desc">
-                                            <span>
-                                                <h3>Pacote com 5</h3>
-                                                Comprando um pacote com 5 marmitas
-                                            </span>
-                                        </div>
-                                    </a>
-                                        
-                                    <h2 class="white">R$12/marmita</h2>
-                                </li>
-                                <li class="item desert">
-
-                                    <a href="#">
-                                        <img src="images/food3.jpg" class="img-responsive" alt="Food" >
-                                        <div class="menu-desc">
-                                            <span>
-                                                <h3>Pacote com 10</h3>
-                                                Comprando um pacote com 10 marmitas
-                                            </span>
-                                        </div>
-                                    </a>
-                                        
-                                    <h2 class="white">R$10/marmita</h2>
-                                </li>
-                                <!--
-                                <li class="item breakfast special">
-
-                                    <a href="#">
-                                        <img src="images/food4.jpg" class="img-responsive" alt="Food" >
-                                        <div class="menu-desc">
-                                            <span>
-                                                <h3>Prawn Dish</h3>
-                                                Tempor incididunt ut labore et dolore
-                                            </span>
-                                        </div>
-                                    </a>
-                                        
-                                    <h2 class="white">$15</h2>
-                                </li>
-                                <li class="item breakfast">
-
-                                    <a href="#">
-                                        <img src="images/food5.jpg" class="img-responsive" alt="Food" >
-                                        <div class="menu-desc">
-                                            <span>
-                                                <h3>Vegetable Dish</h3>
-                                                Magna aliqua. Ut enim ad minim veniam
-                                            </span>
-                                        </div>
-                                    </a>
-                                        
-                                    <h2 class="white">$20</h2>
-                                </li>
-                                <li class="item dinner special">
-
-                                    <a href="#">
-                                        <img src="images/food6.jpg" class="img-responsive" alt="Food" >
-                                        <div class="menu-desc">
-                                            <span>
-                                                <h3>Chicken Dish</h3>
-                                                Quis nostrud exercitation ullamco laboris
-                                            </span>
-                                        </div>
-                                    </a>
-
-                                    <h2 class="white">$22</h2>
-                                </li>
-                                <li class="item desert">
-
-                                    <a href="#">
-                                        <img src="images/food7.jpg" class="img-responsive" alt="Food" >
-                                        <div class="menu-desc">
-                                            <span>
-                                                <h3>Vegetable Noodles</h3>
-                                                Nisi ut aliquip ex ea commodo
-                                            </span>
-                                        </div>
-                                    </a>
-
-                                    <h2 class="white">$32</h2>
-                                </li>
-                                <li class="item dinner">
-
-                                    <a href="#">
-                                        <img src="images/food8.jpg" class="img-responsive" alt="Food" >
-                                        <div class="menu-desc">
-                                            <span>
-                                                <h3>Special Salad</h3>
-                                                Duis aute irure dolor in reprehenderit
-                                            </span>
-                                        </div>
-                                    </a>
-
-                                    <h2 class="white">$38</h2>
-                                </li>
-                                <li class="item desert special">
-
-                                    <a href="#">
-                                        <img src="images/food9.jpg" class="img-responsive" alt="Food" >
-                                        <div class="menu-desc">
-                                            <span>
-                                                <h3>Ice-cream</h3>
-                                                Excepteur sint occaecat cupidatat non
-                                            </span>
-                                        </div>
-                                    </a>
-                                    
-                                    <h2 class="white">$38</h2>
-                                </li>  
-                                -->
-                            </ul>
-
-                            <!-- <div class="text-center">
-                                    <a id="loadPricingContent" class="btn btn-middle hidden-sm hidden-xs">Load More <span class="caret"></span></a>
-                            </div> -->
-
-                        </div>   
-                    </div>
-                </div>
-
-            </div> 
-        </section>
-    -->
-
-
-        <!--== 8. Great Place to enjoy ==--
-        <section id="great-place-to-enjoy" class="great-place-to-enjoy">
-            <img class="img-responsive section-icon hidden-sm hidden-xs" src="images/icons/beer_black.png">
-            <div class="wrapper">
-                <div class="container-fluid">
-                    <div class="row dis-table">
-                        <div class="col-xs-6 col-sm-6 dis-table-cell color-bg">
-                            <h2 class="section-title">Great Place to enjoy</h2>
-                        </div>
-                        <div class="col-xs-6 col-sm-6 dis-table-cell section-bg">
-                            
-                        </div>
-                    </div> <!-- /.dis-table -->
-                </div> <!-- /.row -->
-            </div> <!-- /.wrapper -->
-        </section> <!-- /#great-place-to-enjoy -->
-
-
-
-        <!--==  9. Our Beer  ==--
-        <section id="beer" class="beer">
-            <img class="img-responsive section-icon hidden-sm hidden-xs" src="images/icons/beer_color.png">
-            <div class="container-fluid">
-                <div class="row dis-table">
-                    <div class="hidden-xs col-sm-6 dis-table-cell section-bg">
-
-                    </div>
-
-                    <div class="col-xs-12 col-sm-6 dis-table-cell">
-                        <div class="section-content">
-                            <h2 class="section-content-title">Our Beer</h2>
-                            <div class="section-description">
-                                <p class="section-content-para">
-                                    Astronomy compels the soul to look upward, and leads us from this world to another.  Curious that we spend more time congratulating people who have succeeded than encouraging people who have not. As we got further and further away, it [the Earth] diminished in size.
-                                </p>
-                                <p class="section-content-para">
-                                    beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.  Where ignorance lurks, so too do the frontiers of discovery and imagination.Astronomy compels the soul to look upward, and leads us from this world to another.  Curious that we spend more time congratulating people who have succeeded than encouraging people who have not. As we got further and further away, it [the Earth] diminished in size.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    -->
-
-
-
-        <!--== 10. Our Breakfast Menu ==--
-        <section id="breakfast" class="breakfast">
-            <img class="img-responsive section-icon hidden-sm hidden-xs" src="images/icons/bread_black.png">
-            <div class="wrapper">
-                <div class="container-fluid">
-                    <div class="row dis-table">
-                        <div class="col-xs-6 col-sm-6 dis-table-cell color-bg">
-                            <h2 class="section-title">Our Breakfast Menu</h2>
-                        </div>
-                        <div class="col-xs-6 col-sm-6 dis-table-cell section-bg">
-                            
-                        </div>
-                    </div> <!-- /.dis-table -->
-                </div> <!-- /.row -->
-            </div> <!-- /.wrapper -->
-        </section> <!-- /#breakfast -->
-
-
-
-        <!--== 11. Our Bread ==--
-        <section id="bread" class="bread">
-            <img class="img-responsive section-icon hidden-sm hidden-xs" src="images/icons/bread_color.png">
-            <div class="container-fluid">
-                <div class="row dis-table">
-                    <div class="hidden-xs col-sm-6 dis-table-cell section-bg">
-
-                    </div>
-                    <div class="col-xs-12 col-sm-6 dis-table-cell">
-                        <div class="section-content">
-                            <h2 class="section-content-title">
-                                Our Bread
-                            </h2>
-                            <div class="section-description">
-                                <p class="section-content-para">
-                                    Astronomy compels the soul to look upward, and leads us from this world to another.  Curious that we spend more time congratulating people who have succeeded than encouraging people who have not. As we got further and further away, it [the Earth] diminished in size.
-                                </p>
-                                <p class="section-content-para">
-                                    beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.  Where ignorance lurks, so too do the frontiers of discovery and imagination.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    -->
-
-
-
-
-        <!--== 12. Our Featured Dishes Menu ==--
-        <section id="featured-dish" class="featured-dish">
-            <img class="img-responsive section-icon hidden-sm hidden-xs" src="images/icons/food_black.png">
-            <div class="wrapper">
-                <div class="container-fluid">
-                    <div class="row dis-table">
-                        <div class="col-xs-6 col-sm-6 dis-table-cell color-bg">
-                            <h2 class="section-title">Our Featured Dishes Menu</h2>
-                        </div>
-                        <div class="col-xs-6 col-sm-6 dis-table-cell section-bg">
-                            
-                        </div>
-                    </div> <!-- /.dis-table -->
-                </div> <!-- /.row -->
-            </div> <!-- /.wrapper -->
-        </section> <!-- /#featured-dish -->
-
-
-
-
-        <!--== 13. Menu List ==--
-        <section id="menu-list" class="menu-list">
-            <div class="container">
-                <div class="row menu">
-                    <div class="col-md-10 col-md-offset-1 col-sm-9 col-sm-offset-2 col-xs-12">
-                        <div class="row">
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                                <div class="row">
-                                    <div class="menu-catagory">
-                                        <h2>Bread</h2>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="menu-item">
-                                        <h3 class="menu-title">French Bread</h3>
-                                        <p class="menu-about">Astronomy compels the soul</p>
-
-                                        <div class="menu-system">
-                                            <div class="half">
-                                                <p class="per-head">
-                                                    <span><i class="fa fa-user"></i></span>1:1
-                                                </p>
-                                            </div>
-                                            <div class="half">
-                                                <p class="price">$149.00</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="menu-item">
-                                        <h3 class="menu-title">Italian Bread</h3>
-                                        <p class="menu-about">Astronomy compels the soul</p>
-
-                                        <div class="menu-system">
-                                            <div class="half">
-                                                <p class="per-head">
-                                                    <span><i class="fa fa-user"></i></span>1:1
-                                                </p>
-                                            </div>
-                                            <div class="half">
-                                                <p class="price">$149.00</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="menu-item">
-                                        <h3 class="menu-title">Regular Bread</h3>
-                                        <p class="menu-about">Astronomy compels the soul</p>
-
-                                        <div class="menu-system">
-                                            <div class="half">
-                                                <p class="per-head">
-                                                    <span><i class="fa fa-user"></i></span>1:1
-                                                </p>
-                                            </div>
-                                            <div class="half">
-                                                <p class="price">$149.00</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                                <div class="row">
-                                    <div class="menu-catagory">
-                                        <h2>Drinks</h2>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="menu-item">
-                                        <h3 class="menu-title">Regular Tea</h3>
-                                        <p class="menu-about">Astronomy compels the soul</p>
-
-                                        <div class="menu-system">
-                                            <div class="half">
-                                                <p class="per-head">
-                                                    <span><i class="fa fa-user"></i></span>1:1
-                                                </p>
-                                            </div>
-                                            <div class="half">
-                                                <p class="price">$20.00</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="menu-item">
-                                        <h3 class="menu-title">Garlic Tea</h3>
-                                        <p class="menu-about">Astronomy compels the soul</p>
-
-                                        <div class="menu-system">
-                                            <div class="half">
-                                                <p class="per-head">
-                                                    <span><i class="fa fa-user"></i></span>1:1
-                                                </p>
-                                            </div>
-                                            <div class="half">
-                                                <p class="price">$30.00</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="menu-item">
-                                        <h3 class="menu-title">Black Coffee</h3>
-                                        <p class="menu-about">Astronomy compels the soul</p>
-
-                                        <div class="menu-system">
-                                            <div class="half">
-                                                <p class="per-head">
-                                                    <span><i class="fa fa-user"></i></span>1:1
-                                                </p>
-                                            </div>
-                                            <div class="half">
-                                                <p class="price">$40.00</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                                <div class="row">
-                                    <div class="menu-catagory">
-                                        <h2>Meat</h2>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="menu-item">
-                                        <h3 class="menu-title">Bacon</h3>
-                                        <p class="menu-about">Astronomy compels the soul</p>
-
-                                        <div class="menu-system">
-                                            <div class="half">
-                                                <p class="per-head">
-                                                    <span><i class="fa fa-user"></i></span>1:1
-                                                </p>
-                                            </div>
-                                            <div class="half">
-                                                <p class="price">$70.00</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="menu-item">
-                                        <h3 class="menu-title">Sausage</h3>
-                                        <p class="menu-about">Astronomy compels the soul</p>
-
-                                        <div class="menu-system">
-                                            <div class="half">
-                                                <p class="per-head">
-                                                    <span><i class="fa fa-user"></i></span>1:1
-                                                </p>
-                                            </div>
-                                            <div class="half">
-                                                <p class="price">$50.00</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="menu-item">
-                                        <h3 class="menu-title">Chicken Balls</h3>
-                                        <p class="menu-about">Astronomy compels the soul</p>
-
-                                        <div class="menu-system">
-                                            <div class="half">
-                                                <p class="per-head">
-                                                    <span><i class="fa fa-user"></i></span>1:1
-                                                </p>
-                                            </div>
-                                            <div class="half">
-                                                <p class="price">$90.00</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6 col-xs-12">
-                                <div class="row">
-                                    <div class="menu-catagory">
-                                        <h2>Special</h2>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="menu-item">
-                                        <h3 class="menu-title">Chicken Balls</h3>
-                                        <p class="menu-about">Astronomy compels the soul</p>
-
-                                        <div class="menu-system">
-                                            <div class="half">
-                                                <p class="per-head">
-                                                    <span><i class="fa fa-user"></i></span>1:1
-                                                </p>
-                                            </div>
-                                            <div class="half">
-                                                <p class="price">$90.00</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="menu-item">
-                                        <h3 class="menu-title">Bacon</h3>
-                                        <p class="menu-about">Astronomy compels the soul</p>
-
-                                        <div class="menu-system">
-                                            <div class="half">
-                                                <p class="per-head">
-                                                    <span><i class="fa fa-user"></i></span>1:1
-                                                </p>
-                                            </div>
-                                            <div class="half">
-                                                <p class="price">$70.00</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="menu-item">
-                                        <h3 class="menu-title">Sausage</h3>
-                                        <p class="menu-about">Astronomy compels the soul</p>
-
-                                        <div class="menu-system">
-                                            <div class="half">
-                                                <p class="per-head">
-                                                    <span><i class="fa fa-user"></i></span>1:1
-                                                </p>
-                                            </div>
-                                            <div class="half">
-                                                <p class="price">$50.00</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="moreMenuContent"></div>
-                        <div class="text-center">
-                            <a id="loadMenuContent" class="btn btn-middle hidden-sm hidden-xs">Load More <span class="caret"></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        -->
-
-
-
-        <!--== 14. Have a look to our dishes ==--
-
-        <section id="have-a-look" class="have-a-look hidden-xs">
-            <img class="img-responsive section-icon hidden-sm hidden-xs" src="images/icons/food_color.png">
-            <div class="wrapper">
-                <div class="container-fluid">
-                    <div class="row">
-
-                        <div class="menu-gallery" style="width: 50%; float:left;">
-                            <div class="flexslider-container">
-                                <div class="flexslider">
-                                    <ul class="slides">
-                                        <li>
-                                            <img src="images/menu-gallery/menu1.png" />
-                                        </li>
-                                        <li>
-                                            <img src="images/menu-gallery/menu2.jpg" />
-                                        </li>
-                                        <li>
-                                            <img src="images/menu-gallery/menu3.png" />
-                                        </li>
-                                        <li>
-                                            <img src="images/menu-gallery/menu4.jpg" />
-                                        </li>
-                                        <li>
-                                            <img src="images/menu-gallery/menu5.jpg" />
-                                        </li>
-                                        <li>
-                                            <img src="images/menu-gallery/menu6.jpg" />
-                                        </li>
-                                        <li>
-                                            <img src="images/menu-gallery/menu7.jpg" />
-                                        </li>
-                                        <li>
-                                            <img src="images/menu-gallery/menu8.jpg" />
-                                        </li>
-                                        <li>
-                                            <img src="images/menu-gallery/menu9.jpg" />
-                                        </li>
-                                        <li>
-                                            <img src="images/menu-gallery/menu10.jpg" />
-                                        </li>
-                                        <li>
-                                            <img src="images/menu-gallery/menu11.jpg" />
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="gallery-heading hidden-xs color-bg" style="width: 50%; float:right;">
-                            <h2 class="section-title">Have A Look To Our Dishes</h2>
-                        </div>
-                        
-
-                    </div> <!-- /.row -->
-                </div> <!-- /.container-fluid -->
-            </div> <!-- /.wrapper -->
-        </section>
-        -->
-
-
-
-
-        <!--== 15. Reserve A Table! ==--
-        <section id="reserve" class="reserve">
-            <img class="img-responsive section-icon hidden-sm hidden-xs" src="images/icons/reserve_black.png">
-            <div class="wrapper">
-                <div class="container-fluid">
-                    <div class="row dis-table">
-                        <div class="col-xs-6 col-sm-6 dis-table-cell color-bg">
-                            <h2 class="section-title">Reserve A Table !</h2>
-                        </div>
-                        <div class="col-xs-6 col-sm-6 dis-table-cell section-bg">
-                            
-                        </div>
-                    </div> <!-- /.dis-table -->
-                </div> <!-- /.row -->
-            </div> <!-- /.wrapper -->
-        </section> <!-- /#reserve -->
-
-        <!--
-        <section class="reservation">
-            <img class="img-responsive section-icon hidden-sm hidden-xs" src="images/icons/reserve_color.png">
-            <div class="wrapper">
-                <div class="container-fluid">
-                    <div class=" section-content">
-                        <div class="row">
-                            <div class="col-md-5 col-sm-6">
-                                <form class="reservation-form" method="post" action="reserve.php">
-                                    <div class="row">
-                                        <div class="col-md-6 col-sm-6">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control reserve-form empty iconified" name="name" id="name" required="required" placeholder="  &#xf007;  Name">
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="email" name="email" class="form-control reserve-form empty iconified" id="email" required="required" placeholder="  &#xf1d8;  e-mail">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 col-sm-6">
-                                            <div class="form-group">
-                                                <input type="tel" class="form-control reserve-form empty iconified" name="phone" id="phone" required="required" placeholder="  &#xf095;  Phone">
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="text" class="form-control reserve-form empty iconified" name="datepicker" id="datepicker" required="required" placeholder="&#xf017;  Time">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12 col-sm-12">
-                                            <textarea type="text" name="message" class="form-control reserve-form empty iconified" id="message" rows="3" required="required" placeholder="  &#xf086;  We're listening"></textarea>
-                                        </div>
-
-                                        <div class="col-md-12 col-sm-12">
-                                            <button type="submit" id="submit" name="submit" class="btn btn-reservation">
-                                                <span><i class="fa fa-check-circle-o"></i></span>
-                                                Make a reservation
-                                            </button>
-                                        </div>
-                                            
-                                    </div>
-                                </form>
-                            </div>
-
-                            <div class="col-md-2 hidden-sm hidden-xs"></div>
-
-                            <div class="col-md-4 col-sm-6 col-xs-12">
-                                <div class="opening-time">
-                                    <h3 class="opening-time-title">Hours</h3>
-                                    <p>Mon to Fri: 7:30 AM - 11:30 AM</p>
-                                    <p>Sat & Sun: 8:00 AM - 9:00 AM</p>
-
-                                    <div class="launch">
-                                        <h4>Lunch</h4>
-                                        <p>Mon to Fri: 12:00 PM - 5:00 PM</p>
-                                    </div>
-
-                                    <div class="dinner">
-                                        <h4>Dinner</h4>
-                                        <p>Mon to Sat: 6:00 PM - 1:00 AM</p>
-                                        <p>Sun: 5:30 PM - 12:00 AM</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-        -->
-
-
-
-
-        <section id="contact" class="contact">
-            <div class="container-fluid color-bg">
-                <div class="row dis-table">
-                    <div class="hidden-xs col-sm-6 dis-table-cell">
-                        <h2 class="section-title">Entre em contato</h2>
-                    </div>
-                    <div class="col-xs-6 col-sm-6 dis-table-cell">
-                        <div class="section-content">
-                            <!--<p>16th Birn street Get Plaza (4th floar) USA</p>-->
-                            <p>+11 9-9999-9999</p>
-                            <p>marmitx@mail.com </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="social-media">
-                    <div class="row">
-                        <div class="col-md-6 col-md-offset-3">
-                            <ul class="center-block">
-                                <li><a href="#" class="fb"></a></li>
-                                <!--
-                                    <li><a href="#" class="twit"></a></li>
-                                <li><a href="#" class="g-plus"></a></li>
-                                <li><a href="#" class="link"></a></li>
-                                -->
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Landing Zero Free Bootstrap Theme with Video</title>
+    <meta name="description" content="This is a free Bootstrap landing page theme created for BootstrapZero. Feature video background and one page design." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Codeply">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/animate.min.css" />
+    <link rel="stylesheet" href="./css/ionicons.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
-            <div class="row">
-                <div id="map-canvas"></div>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#first"><i class="ion-ios-analytics-outline"></i> Landing Zero</a>
+            </div>
+            <div class="navbar-collapse collapse" id="bs-navbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="page-scroll" href="#one">Intro</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#two">Highlights</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#three">Gallery</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#four">Features</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#last">Contact</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" data-toggle="modal" title="A free Bootstrap video landing theme" href="#aboutModal">About</a>
+                    </li>
+                </ul>
             </div>
         </div>
-
-        <!--
-        <section class="contact-form">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
-                        <div class="row">
-                             <form class="contact-form" method="post" action="contact.php">
-                                
-                                <div class="col-md-6 col-sm-6">
-                                    <div class="form-group">
-                                        <input  name="name" type="text" class="form-control" id="name" required="required" placeholder="  Name">
-                                    </div>
-                                    <div class="form-group">
-                                        <input name="email" type="email" class="form-control" id="email" required="required" placeholder="  Email">
-                                    </div>
-                                    <div class="form-group">
-                                        <input name="subject" type="text" class="form-control" id="subject" required="required" placeholder="  Subject">
-                                    </div>
+    </nav>
+    <header id="first">
+        <div class="header-content">
+            <div class="inner">
+                <h1 class="cursive">Simple, One Page Design</h1>
+                <h4>A free landing page theme with video background</h4>
+                <hr>
+                <a href="#video-background" id="toggleVideo" data-toggle="collapse" class="btn btn-primary btn-xl">Toggle Video</a> &nbsp; <a href="#one" class="btn btn-primary btn-xl page-scroll">Get Started</a>
+            </div>
+        </div>
+        <video autoplay="" loop="" class="fillWidth fadeIn wow collapse in" data-wow-delay="0.5s" poster="https://s3-us-west-2.amazonaws.com/coverr/poster/Traffic-blurred2.jpg" id="video-background">
+            <source src="https://s3-us-west-2.amazonaws.com/coverr/mp4/Traffic-blurred2.mp4" type="video/mp4">Your browser does not support the video tag. I suggest you upgrade your browser.
+        </video>
+    </header>
+    <section class="bg-primary" id="one">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
+                    <h2 class="margin-top-0 text-primary">Built On The Bootstrap Grid</h2>
+                    <br>
+                    <p class="text-faded">
+                        Bootstrap's responsive grid comes in 4 sizes or "breakpoints": tiny (xs), small(sm), medium(md) and large(lg). These 4 grid sizes enable you create responsive layouts that behave accordingly on different devices.
+                    </p>
+                    <a href="#three" class="btn btn-default btn-xl page-scroll">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="two">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="margin-top-0 text-primary">Flexible Layouts</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 text-center">
+                    <div class="feature">
+                        <i class="icon-lg ion-android-laptop wow fadeIn" data-wow-delay=".3s"></i>
+                        <h3>Responsive</h3>
+                        <p class="text-muted">Your site looks good everywhere</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 text-center">
+                    <div class="feature">
+                        <i class="icon-lg ion-social-sass wow fadeInUp" data-wow-delay=".2s"></i>
+                        <h3>Customizable</h3>
+                        <p class="text-muted">Easy to theme and customize with SASS</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 text-center">
+                    <div class="feature">
+                        <i class="icon-lg ion-ios-star-outline wow fadeIn" data-wow-delay=".3s"></i>
+                        <h3>Consistent</h3>
+                        <p class="text-muted">A mature, well-tested, stable codebase</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="three" class="no-padding">
+        <div class="container-fluid">
+            <div class="row no-gutter">
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="./assets/deer.jpg">
+                        <img src="./assets/deer.jpg" class="img-responsive" alt="Image 1">
+                        <div class="gallery-box-caption">
+                            <div class="gallery-box-content">
+                                <div>
+                                    <i class="icon-lg ion-ios-search"></i>
                                 </div>
-
-                                <div class="col-md-6 col-sm-6">
-                                    <textarea name="message" type="text" class="form-control" id="message" rows="7" required="required" placeholder="  Message"></textarea>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="./assets/beach.jpg">
+                        <img src="./assets/beach.jpg" class="img-responsive" alt="Image 2">
+                        <div class="gallery-box-caption">
+                            <div class="gallery-box-content">
+                                <div>
+                                    <i class="icon-lg ion-ios-search"></i>
                                 </div>
-
-                                <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
-                                    <div class="text-center">
-                                        <button type="submit" id="submit" name="submit" class="btn btn-send">Send </button>
-                                    </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+				<div class="clearfix hidden-lg"> </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="./assets/lake.jpg">
+                        <img src="./assets/lake.jpg" class="img-responsive" alt="Image 3">
+                        <div class="gallery-box-caption">
+                            <div class="gallery-box-content">
+                                <div>
+                                    <i class="icon-lg ion-ios-search"></i>
                                 </div>
-                            </form>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="./assets/bike.jpg">
+                        <img src="./assets/bike.jpg" class="img-responsive" alt="Image 4">
+                        <div class="gallery-box-caption">
+                            <div class="gallery-box-content">
+                                <div>
+                                    <i class="icon-lg ion-ios-search"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+				<div class="clearfix hidden-lg"> </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="./assets/city.jpg">
+                        <img src="./assets/city.jpg" class="img-responsive" alt="Image 5">
+                        <div class="gallery-box-caption">
+                            <div class="gallery-box-content">
+                                <div>
+                                    <i class="icon-lg ion-ios-search"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="./assets/colors.jpg">
+                        <img src="./assets/colors.jpg" class="img-responsive" alt="Image 6">
+                        <div class="gallery-box-caption">
+                            <div class="gallery-box-content">
+                                <div>
+                                    <i class="icon-lg ion-ios-search"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid" id="four">
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+                <h2 class="text-center text-primary">Features</h2>
+                <hr>
+                <div class="media wow fadeInRight">
+                    <h3>Simple</h3>
+                    <div class="media-body media-middle">
+                        <p>What could be easier? Get started fast with this landing page starter theme.</p>
+                    </div>
+                    <div class="media-right">
+                        <i class="icon-lg ion-ios-bolt-outline"></i>
+                    </div>
+                </div>
+                <hr>
+                <div class="media wow fadeIn">
+                    <h3>Free</h3>
+                    <div class="media-left">
+                        <a href="#alertModal" data-toggle="modal" data-target="#alertModal"><i class="icon-lg ion-ios-cloud-download-outline"></i></a>
+                    </div>
+                    <div class="media-body media-middle">
+                        <p>Yes, please. Grab it for yourself, and make something awesome with this.</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="media wow fadeInRight">
+                    <h3>Unique</h3>
+                    <div class="media-body media-middle">
+                        <p>Because you don't want your Bootstrap site, to look like a Bootstrap site.</p>
+                    </div>
+                    <div class="media-right">
+                        <i class="icon-lg ion-ios-snowy"></i>
+                    </div>
+                </div>
+                <hr>
+                <div class="media wow fadeIn">
+                    <h3>Popular</h3>
+                    <div class="media-left">
+                        <i class="icon-lg ion-ios-heart-outline"></i>
+                    </div>
+                    <div class="media-body media-middle">
+                        <p>There's good reason why Bootstrap is the most used frontend framework in the world.</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="media wow fadeInRight">
+                    <h3>Tested</h3>
+                    <div class="media-body media-middle">
+                        <p>Bootstrap is matured and well-tested. It's a stable codebase that provides consistency.</p>
+                    </div>
+                    <div class="media-right">
+                        <i class="icon-lg ion-ios-flask-outline"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <aside class="bg-dark">
+        <div class="container text-center">
+            <div class="call-to-action">
+                <h2 class="text-primary">Get Started</h2>
+                <a href="http://www.bootstrapzero.com/bootstrap-template/landing-zero" target="ext" class="btn btn-default btn-lg wow flipInX">Free Download</a>
+            </div>
+            <br>
+            <hr/>
+            <br>
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <div class="row">
+                        <h6 class="wide-space text-center">BOOTSTRAP IS BASED ON THESE STANDARDS</h6>
+                        <div class="col-sm-3 col-xs-6 text-center">
+                            <i class="icon-lg ion-social-html5-outline" title="html 5"></i>
+                        </div>
+                        <div class="col-sm-3 col-xs-6 text-center">
+                            <i class="icon-lg ion-social-sass" title="sass"></i>
+                        </div>
+                        <div class="col-sm-3 col-xs-6 text-center">
+                            <i class="icon-lg ion-social-javascript-outline" title="javascript"></i>
+                        </div>
+                        <div class="col-sm-3 col-xs-6 text-center">
+                            <i class="icon-lg ion-social-css3-outline" title="css 3"></i>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        -->
-
-
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3">
-                        <div class="copyright text-center">
-                            <p>
-                                &copy; Copyright, 2020 <a href="http://www.eduardocapela.com.br" target="_blank">Eduardo Capela.</a>
-                            </p>
+        </div>
+    </aside>
+    <section id="last">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="margin-top-0 wow fadeIn">Get in Touch</h2>
+                    <hr class="primary">
+                    <p>We love feedback. Fill out the form below and we'll get back to you as soon as possible.</p>
+                </div>
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <form class="contact-form row">
+                        <div class="col-md-4">
+                            <label></label>
+                            <input type="text" class="form-control" placeholder="Name">
                         </div>
-                    </div>
+                        <div class="col-md-4">
+                            <label></label>
+                            <input type="text" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="col-md-4">
+                            <label></label>
+                            <input type="text" class="form-control" placeholder="Phone">
+                        </div>
+                        <div class="col-md-12">
+                            <label></label>
+                            <textarea class="form-control" rows="9" placeholder="Your message here.."></textarea>
+                        </div>
+                        <div class="col-md-4 col-md-offset-4">
+                            <label></label>
+                            <button type="button" data-toggle="modal" data-target="#alertModal" class="btn btn-primary btn-block btn-lg">Send <i class="ion-android-arrow-forward"></i></button>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </footer>
-
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
-        <script type="text/javascript" src="js/jquery.mixitup.min.js" ></script>
-        <script src="js/wow.min.js"></script>
-        <script src="js/jquery.validate.js"></script>
-        <script type="text/javascript" src="js/jquery.hoverdir.js"></script>
-        <script type="text/javascript" src="js/jQuery.scrollSpeed.js"></script>
-        <script src="js/script.js"></script>
-    </body>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-6 col-sm-3 column">
+                    <h4>Information</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="">Products</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Benefits</a></li>
+                        <li><a href="">Developers</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 col-sm-3 column">
+                    <h4>About</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Delivery Information</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-3 column">
+                    <h4>Stay Posted</h4>
+                    <form>
+                        <div class="form-group">
+                          <input type="text" class="form-control" title="No spam, we promise!" placeholder="Tell us your email">
+                        </div>
+                        <div class="form-group">
+                          <button class="btn btn-primary" data-toggle="modal" data-target="#alertModal" type="button">Subscribe for updates</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-xs-12 col-sm-3 text-right">
+                    <h4>Follow</h4>
+                    <ul class="list-inline">
+                      <li><a rel="nofollow" href="" title="Twitter"><i class="icon-lg ion-social-twitter-outline"></i></a>&nbsp;</li>
+                      <li><a rel="nofollow" href="" title="Facebook"><i class="icon-lg ion-social-facebook-outline"></i></a>&nbsp;</li>
+                      <li><a rel="nofollow" href="" title="Dribble"><i class="icon-lg ion-social-dribbble-outline"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <br/>
+            <span class="pull-right text-muted small"><a href="http://www.bootstrapzero.com">Landing Zero by BootstrapZero</a> ©2015 Company</span>
+        </div>
+    </footer>
+    <div id="galleryModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        	<div class="modal-body">
+        		<img src="" id="galleryImage" class="img-responsive" />
+        		<p>
+        		    <br/>
+        		    <button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true">Close <i class="ion-android-close"></i></button>
+        		</p>
+        	</div>
+        </div>
+        </div>
+    </div>
+    <div id="aboutModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+        	<div class="modal-body">
+        		<h2 class="text-center">Landing Zero Theme</h2>
+        		<h5 class="text-center">
+        		    A free, responsive landing page theme built by BootstrapZero.
+        		</h5>
+        		<p class="text-justify">
+        		    This is a single-page Bootstrap template with a sleek dark/grey color scheme, accent color and smooth scrolling.
+        		    There are vertical content sections with subtle animations that are activated when scrolled into view using the jQuery WOW plugin. There is also a gallery with modals
+        		    that work nicely to showcase your work portfolio. Other features include a contact form, email subscribe form, multi-column footer. Uses Questrial Google Font and Ionicons.
+        		</p>
+        		<p class="text-center"><a href="http://www.bootstrapzero.com">Download at BootstrapZero</a></p>
+        		<br/>
+        		<button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true"> OK </button>
+        	</div>
+        </div>
+        </div>
+    </div>
+    <div id="alertModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+        	<div class="modal-body">
+        		<h2 class="text-center">Nice Job!</h2>
+        		<p class="text-center">You clicked the button, but it doesn't actually go anywhere because this is only a demo.</p>
+        		<p class="text-center"><a href="http://www.bootstrapzero.com">Learn more at BootstrapZero</a></p>
+        		<br/>
+        		<button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true">OK <i class="ion-android-close"></i></button>
+        	</div>
+        </div>
+        </div>
+    </div>
+    <!--scripts loaded here -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.easing.min.js"></script>
+    <script src="./js/wow.js"></script>
+    <script src="./js/scripts.js"></script>
+  </body>
 </html>
