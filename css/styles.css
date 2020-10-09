@@ -40,6 +40,10 @@ a {
     transition: all .35s;
 }
 
+#titulo {
+	font-size: 100px;
+}
+
 a:hover,
 a:focus {
     color: #9c27c1;
